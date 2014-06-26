@@ -33,6 +33,10 @@ class IpV4Address(object):
     def int(self):
         return self._int
 
+    @int.setter
+    def int(self, value):
+        self._int = value
+
     def __to_valid(self, ip_addr_to_check):
         """
         (int) -> int
