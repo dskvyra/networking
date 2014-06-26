@@ -3,7 +3,7 @@ from network import *
 class Route(object):
 	def __init__(self, given_network, gateway, interface_name, metric):
 		""" (network, string, string, int) -> () """
-		if str(given_network.__class__) == 'network.Network':
+		if given_network.__class__ == Network:
 			self._network = given_network
 		else:
 			raise TypeError
@@ -60,6 +60,7 @@ class Route(object):
 
 if __name__ == "__main__":
 	net = Network('192.168.220.0', 23)
+	print net.__class__ == Network
 	route = Route(net, '192.168.220.5', 'bge0', 5)
 	route2 = Route(net, '192.168.220.5', 'bge0', 5)
 	print route
