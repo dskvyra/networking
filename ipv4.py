@@ -8,7 +8,7 @@ max_int = 4294967295
 
 #place for dict: cidr->int and back 
 
-class IpV4Address:
+class IpV4Address(object):
     def __init__(self, ip_addr):
         self._int = self.__to_valid(ip_addr)
         

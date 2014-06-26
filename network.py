@@ -1,7 +1,7 @@
 # import ipdb
 from ipv4 import *
 
-class Network:
+class Network(object):
     def __init__(self, ip_addr, mask_length):
         """ (str, int) -> """
         self._mask = IpV4Mask(mask_length)

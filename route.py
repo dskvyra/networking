@@ -1,6 +1,6 @@
 from network import *
 
-class Route:
+class Route(object):
 	def __init__(self, given_network, gateway, interface_name, metric):
 		""" (network, string, string, int) -> () """
 		if str(given_network.__class__) == 'network.Network':

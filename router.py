@@ -4,7 +4,7 @@ from sets import Set
 
 class TableEmpty(Exception): pass
 
-class Router:
+class Router(object):
 	def __init__(self, routes):
 		"""([Route,]) ->"""
 		if type(routes) is not Set:
