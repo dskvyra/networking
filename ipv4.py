@@ -133,5 +133,3 @@ if __name__ == '__main__':
 
 
     print 'Broadcast:', IpV4Address(IpV4Address('192.168.220.0').int | ( ~IpV4Address('255.255.255.0').int & 0xffff))
-
-    
